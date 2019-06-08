@@ -38,5 +38,5 @@ public:
 
 
 int main(int argc, char** arg) {
-      printf("palindrome? %d", Solution().isPalindrome(123));
+      printf("palindrome? %d", Solution().isPalindrome(121));
 }
