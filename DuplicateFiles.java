@@ -5,6 +5,8 @@
 * @date 12/7/2018
 */
 
+package learn.onward;
+
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.io.IOException;
@@ -59,6 +61,8 @@ public class DuplicateFiles {
   public static void main(String[] args) {
       try {
       System.out.println(DuplicateFiles.getDuplicateFiles("duplicateTest"));
+      System.out.println("Working Directory = " +
+              System.getProperty("user.dir"));
       }
       catch (IOException e) {
         System.out.println(e);
