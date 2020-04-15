@@ -1,4 +1,4 @@
-/**
+/*
 * Finds duplicate files with identical content in a directory
 *
 * @author pavaniprasanna
@@ -33,13 +33,13 @@ public class DuplicateFiles {
   /**
   * Finds duplicate Files
   *
-  * @param path of a folder
+  * @param folderPath of a folder
   * @return HashMap with key: file content, value: list of filenames
   */
   public static HashMap<String,ArrayList<String>> getDuplicateFiles(String folderPath) throws IOException {
     // key: file content, value: list of filenames
     HashMap<String,ArrayList<String>> duplicateMap =
-                    new HashMap<String,ArrayList<String>>();
+            new HashMap<>();
     File[] fileList = new File(folderPath).listFiles();
 
     if (fileList != null) {
@@ -47,7 +47,7 @@ public class DuplicateFiles {
       for (File file : fileList) {
         String content = readFile(file.toString(), StandardCharsets.UTF_8);
         ArrayList<String> list = duplicateMap.containsKey(content) ?
-                duplicateMap.get(content) : new ArrayList<String>();
+                duplicateMap.get(content) : new ArrayList<>();
         list.add(file.toString());
         duplicateMap.put(content, list);
       }
